@@ -1,23 +1,19 @@
 "use client";
 
-import { useEffect } from "react";
-
 export default function Home() {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.type = "module";
-    script.src = "https://agent.d-id.com/v2/index.js";
-    script.setAttribute("data-client-key", "c3RhbmR3aXRodXNpc3JhZWxAZ21haWwuY29t:llldq-gXzqRpkoTlixn7_");
-    script.setAttribute("data-agent-id", "v2_agt_bRJbyftV");
-    script.setAttribute("data-name", "did-agent");
-    script.setAttribute("data-position", "right"); // 🔴 important
-    script.setAttribute("data-monitor", "true");   // 🔴 important
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
-  return <main style={{ height: "100vh" }} />;
+  return (
+    <>
+      <script
+        type="module"
+        src="https://agent.d-id.com/v2/index.js"
+        data-mode="fabio"
+        data-client-key="Z29vZ2xlLW9hdXRoMnwxMTgwMTk5MjQ5MzkwMjI4NjYzNTE6UExyTUgzX3kyWDMzcWZIQTFXNFh1"
+        data-agent-id="v2_agt_bRJbyftV"
+        data-name="did-agent"
+        data-monitor="true"
+        data-orientation="horizontal"
+        data-position="right"
+      />
+    </>
+  );
 }
