@@ -10,6 +10,8 @@ export default function Home() {
     script.setAttribute("data-client-key", "c3RhbmR3aXRodXNpc3JhZWxAZ21haWwuY29t:llldq-gXzqRpkoTlixn7_");
     script.setAttribute("data-agent-id", "v2_agt_bRJbyftV");
     script.setAttribute("data-name", "did-agent");
+    script.setAttribute("data-position", "right"); // 🔴 important
+    script.setAttribute("data-monitor", "true");   // 🔴 important
     document.body.appendChild(script);
 
     return () => {
@@ -17,9 +19,5 @@ export default function Home() {
     };
   }, []);
 
-  return (
-    <main style={{ height: "100vh", background: "#fff" }}>
-      <h1>D-ID Agent</h1>
-    </main>
-  );
+  return <main style={{ height: "100vh" }} />;
 }
